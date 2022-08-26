@@ -1,0 +1,1339 @@
+@import url(fonts.css);
+
+:root {
+    --LB: "Lato-Bold", sans-serif;
+    --LR: "Lato-Regular", sans-serif;
+    --PL: "Poppins-Light", sans-serif;
+    --PM: "Poppins-Medium", sans-serif;
+    --PR: "Poppins-Regular", sans-serif;
+    --PSb: "Poppins-SemiBold", sans-serif;
+    --RB: "Roboto-Bold", sans-serif;
+    --RR: "Roboto-Regular", sans-serif;
+    --cl_orange: #F56606;
+    --cl_bg: #1B1B1B;
+    --cl_white: #fff;
+    --cl_text: #A6A6AA;
+    --cl_black: #000000;
+    --cl_body: #f7f7f7;
+    --cl_foods_title: #3A3A3A;
+    --cl_blue: #AD6CF5;
+    --cl_red: #E74C3C;
+    --cl_result: #FAFAE5;
+    --cl_booking-bg: rgba(257, 184, 219, 0.5);
+    --transition: all .3s linear;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+.container {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ALl buttons */
+.all_btns{
+    position: relative;
+    overflow: hidden;
+}
+.all_btns>span{
+    left: 50%;
+    top: 50%;
+    position: absolute;  
+    background: var(--cl_white);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ripples 0.6s linear;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--cl_body);
+}
+
+main {
+    padding-bottom: 7%;
+}
+button{
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: #fff;
+    /* padding: 0 0 115px; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    padding-top: 10px;
+    border-top: 4px solid transparent;
+    transition: var(--transition);
+    justify-content: flex-end;
+    color: var(--cl_orange);
+    opacity: 0.5;
+}
+
+.header_links.active {
+    opacity: 1.5;
+}
+
+.header_links-img {
+    height: 30px;
+    width: auto;
+    font-size: 27px;
+}
+
+.header_links-img-into {
+    height: 100%;
+    object-fit: contain;
+}
+
+.header_links h3 {
+    font-family: var(--PR);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--cl_black);
+    text-transform: capitalize;
+}
+
+.header_links.active {
+    border-color: var(--cl_orange);
+}
+
+.header_links.active h3 {
+    color: var(--cl_orange);
+}
+
+/* Section Home */
+.header_content {
+    display: none;
+}
+
+.header_content.active {
+    display: block;
+    padding-bottom: 50px;
+}
+
+.home_header_title-into {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.header_title-logo {
+    width: 120px;
+}
+.header_title_img2{
+    border-radius: 50%;
+    max-width: 45px;
+    width: 100%;
+    background: var(--cl_blue);
+}
+.input_search {
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+    margin-top: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    border-radius: 6px;
+    gap: 5px;
+}
+
+.header_title-search {
+    border: none;
+    padding: 10px 30px 10px 0;
+}
+
+.header_title-search:focus {
+    outline: none;
+}
+
+.home_popular {
+    margin-top: 20px;
+}
+
+.home_popular-into {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home_popular-into-in {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_discount-percent {
+    margin-top: 40px;
+    background: linear-gradient(269.26deg, rgba(245, 102, 6, 0.23) 17.81%, #F60C8B 97.66%);
+    background-blend-mode: multiply;
+    border-radius: 15px;
+    padding: 41px 0 35px 10px;
+}
+
+.header_discount-title {
+    font-family: var(--PSb);
+    font-size: 28px;
+    line-height: 32px;
+    font-feature-settings: 'liga' off;
+    color: var(--cl_white);
+    padding-bottom: 15px;
+}
+
+.header_discount-text {
+    font-family: var(--PSb);
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    color: var(--cl_white);
+    padding-bottom: 15px;
+}
+
+.btn_discount {
+    font-family: var(--PM);
+    font-size: 15px;
+    line-height: 22px;
+    color: #F6158D;
+    padding: 10px 20px;
+    background: var(--cl_white);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* .discount{
+
+} */
+
+
+.main_title-h2 {
+    font-family: var(--PSb);
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--cl_bg);
+    text-transform: capitalize;
+}
+
+.see_all {
+    font-family: var(--RB);
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.popular_category_boxs {
+    display: flex;
+    gap: 5px;
+    margin: 25px 15px 0;
+    overflow-x: auto;
+}
+
+.popular_category_box-wrap {
+    flex-wrap: wrap;
+    overflow-x: unset;
+}
+
+.popular_category_box {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 5rem;
+    align-items: center;
+}
+
+.popular_category_box img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.popular_category_box h4 {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 12px;
+    text-transform: capitalize;
+    color: #000000;
+}
+ 
+
+.home_imp-main {
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+
+.home_important-main {
+    display: flex;
+    gap: 5px;
+    margin: 15px 15px 0;
+    overflow-x: auto;
+    /* overscroll-behavior: inherit;
+    overscroll-behavior-inline: contain; */
+}
+.home_important-main::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.special_category_box {
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 275px;
+}
+
+.special_category_box-top {
+    background: #D6B6FA;
+    position: relative;
+    border: 0px solid transparent;
+    border-radius: 10px 10px 0 0;
+    height: 168px;
+}
+
+.special_category_box-top>img {
+    width: 273px;
+    height: 168px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.favorites_heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px 8px 0 0;
+    padding: 5px;
+    background: var(--cl_white);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+}
+.favorite_heart-btn{
+    background: url(../img/Heart\ icons.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    transition: var(--transition);
+    
+}
+.favorite_heart-btnActive{
+    background: url(../img/heart_icons-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+/* .favorites_heart-img {
+
+} */
+
+.favorites_heart-img2 {
+    display: none;
+}
+
+.favorites_heart-img2_add {
+    display: block;
+}
+
+.favorites_heart-img1_remove {
+    display: none;
+}
+
+.special_category_box-bottom {
+    padding: 16px;
+    background: var(--cl_white);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.foods_title {
+    font-family: var(--LR);
+    font-weight: 500 !important;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--cl_foods_title);
+    text-transform: capitalize;
+}
+
+.foods_price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foods_price-into {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price_change {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_foods_title);
+    opacity: 0.9;
+}
+
+.price_old {
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration-line: line-through;
+    color: #CBCBD4;
+    opacity: 0.9;
+}
+
+.foods_price-right {
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #51B960;
+    padding: 4px 8px;
+    background: #EAF8EC;
+    border-radius: 100px;
+}
+
+.foods_text {
+    font-family: var(--LR);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--cl_text);
+    padding-bottom: 12px;
+}
+
+.chef_pick {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.chef_pick-left {
+    display: flex;
+    align-items: center;
+}
+
+.chef_pick-left>h5 {
+    padding: 0 8px 0 4px;
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--cl_foods_title);
+}
+
+.chef_pick-left>h5 span {
+    font-family: var(--LR);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--cl_foods_title);
+}
+
+.chef_pick-left h4 {
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--cl_foods_title);
+    text-transform: capitalize;
+}
+
+.chef_pick_btn {
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #5FA1D5;
+    background: #ECF6FF;
+    border-radius: 100px;
+    padding: 4px 8px;
+    border-color: transparent;
+}
+
+.man_chef_pick-btn {
+    font-size: 11px;
+    padding: 2px 6px;
+}
+
+/* Menu Section */
+.menu_header-container {
+    margin-bottom: 15px;
+    padding: 40px 15px 10px;
+    background: var(--cl_white);
+}
+
+.menu_header_title {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu_header_title-h1 {
+    font-family: var(--PSb);
+    font-size: 25px;
+    line-height: 33px;
+    color: var(--cl_bg);
+    margin: auto;
+}
+
+.back_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.menu_header-input {
+    margin: 0px 15px;
+}
+
+.menu_category {
+    margin-top: 45px;
+}
+
+.menu_category-title {
+    margin: 20px 0 30px;
+    padding-left: 15px;
+    overflow-x: scroll;
+    display: flex;
+    gap: 10px;
+}
+
+#menu_category_btn {
+    flex: 1 1 5rem;
+}
+
+.menu_category_btn {
+    color: var(--cl_white);
+    background: var(--cl_blue);
+    padding: 10px 15px;
+    font-size: 15px;
+    width: 150px;
+    height: 39px;
+    border-color: var(--cl_red);
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.menu_category_btn.active {
+    background: var(--cl_white);
+    color: var(--cl_red);
+}
+
+.dessert_icans-img {
+    padding-bottom: 1px;
+}
+
+.shakes_icon1 {
+    max-width: 20px;
+    width: 100%;
+}
+
+.shakes_colors {
+    display: none;
+}
+
+.menu_category_btn:hover .shakes_colors {
+    display: block;
+}
+
+.menu_category_btn:hover .shakes_colors-white {
+    display: none;
+}
+
+.menu_category-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    flex: 1 1 25rem;
+    justify-content: center;
+}
+.menu_category-boxsActive{
+    display: none;
+}
+.menu_headerActive{
+    display: none;
+}
+.menu_categorybox{
+    flex: 1 1 35rem;
+    width: 100%;
+    padding: 0 5px;
+}
+.menu_category-box {
+    display: flex;
+    flex: 1 1 5rem;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    /* box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 30%); */
+}
+
+.menu_category-box-left {
+    position: relative;
+    width: 100%;
+}
+
+.menu_category-box-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 40%;
+    width: 100%;
+}
+
+.menu_heart-img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu_favorites_heart {
+    width: 30px;
+    height: 30px;
+}
+
+.menu_category-box-left>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.menu_food-title {
+    font-size: 18px;
+}
+.menu_categorybox{
+    max-width: 600px !important;
+    width: 100%;
+}
+.menu_category_btn-bascet {
+    border-radius: 10px;
+    background: var(--cl_red);
+    width: 100%;
+}
+
+.menu_category_btn-bascet:hover {
+    color: var(--cl_red);
+    background-color: var(--cl_white);
+}
+
+.order-into {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    bottom: 67px;
+    right: 0;
+    background: var(--cl_white);
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    transition: var(--transition);
+}
+.order-intoActive{
+    transition: var(--transition);
+    display: flex;
+    top: 0;
+}
+
+
+.menu_order-img {
+    /* max-width: 950px; */
+    position: relative;
+    margin: auto;
+}
+
+.menu_order-img-img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 676px;
+}
+.menu_order-main {
+    padding: 0 10px;
+    border-radius: 16px 16px;
+    position: relative;
+    /* border: 1px solid black; */
+    bottom: 14px;
+    background: white;
+    z-index: 99;
+}
+
+.menu_order-title {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu_order-line {
+    height: 1px;
+    max-width: 100%;
+    width: 100%;
+    background: var(--cl_text);
+}
+
+.menu_order-chef-pick {
+    padding: 18px 0;
+}
+
+.menu_order-add {
+    padding-top: 15px;
+}
+
+.menu_order-add>h3 {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cl_foods_title);
+    text-transform: capitalize;
+}
+
+.menu_order-addInput {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    color: var(--cl_text);
+}
+
+.menu_order-addInput-title {
+    font-family: var(--LR);
+    font-weight: 500 !important;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cl_foods_title);
+    text-transform: capitalize;
+}
+
+.menu_order-addInput-into {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.menu_order-addInput-price {
+    font-family: var(--LR);
+    font-weight: 500 !important;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cl_text);
+    text-transform: capitalize;
+}
+
+.menu_order-fries {
+    max-width: 50px;
+    width: 100%;
+}
+
+.main__product-label {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.main__product-checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.main__product-check {
+    border: 1px solid #201f1f;
+    width: 24px;
+    height: 24px;
+    display: block;
+    font-family: 'FA Regular';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    transition: 0.2s;
+}
+
+.main__product-checkbox:checked~.main__product-check {
+    border-color: #008000;
+}
+
+.main__product-check::before {
+    content: '\f00c';
+    font-size: 20px;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.2s;
+    color: #008000;
+    display: flex;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.main__product-checkbox:checked~.main__product-check::before {
+    transform: scale(1);
+    opacity: 1.5;
+}
+
+.menu_order-addInput-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu_order-intoOrder {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 10px;
+}
+.menu_category-text{
+    display: none;
+}
+.menu_order-total {
+    max-width: 142px !important;
+    height: 38px !important;
+    padding: unset !important;
+    justify-content: center !important;
+    font-family: var(--LB);
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--cl_white);
+    transition: var(--transition);
+}
+.menu_order-total:hover{
+    color: var(--cl_orange);
+    background: var(--cl_white);
+}
+.menu_order-total-basket {
+    margin-right: 2px;
+}
+
+
+
+
+
+
+/* Booking Section */
+.booking_top {
+    height: 290px;
+    /* position: relative; */
+    background: url(../img/booking_top-img.jpg) no-repeat center;
+}
+
+.booking_top-img-shadow {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
+
+.booking_bottom {
+    background: var(--cl_white);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.booking_bottom-into {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking_bottom-top {
+    display: flex;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.bootking_kres {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+.menu_order-into{
+    position: relative;
+}
+.booking-remove {
+    display: none;
+}
+
+.bootking_kresActive {
+    display: flex;
+}
+.menu_order-header-title{
+    margin-top: 15px;
+    padding: 0px 15px;
+    background: var(--cl_white);
+}
+.menu_header_title-h1 {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_foods_title);
+}
+.order_menu-h1{
+    text-transform: uppercase;
+    color: var(--cl_white) !important;
+    padding: 10px 45px 10px;
+    background: var(--cl_blue);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.booking_bottom-guests {
+    padding: 8px;
+    border: 1px solid var(--cl_orange);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+}
+
+.booking_all-title {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_black);
+}
+
+.booking_bottom-guests-number {
+    background: var(--cl_orange);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--cl_orange);
+    border-radius: 5px;
+    padding: 7px 16px;
+    color: var(--cl_white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120px;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.booking_bottom-time {
+    border: 1px solid var(--cl_orange);
+    border-radius: 5px;
+    padding: 4px;
+    padding-bottom: 14px;
+    margin-bottom: 10px;
+}
+
+.main__product-num {
+    font-family: var(--LB);
+    font-size: 20px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off, 'calt' off;
+    color: var(--cl_white);
+}
+
+.booking_bottom-time-btn {
+    padding-top: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.booking_time-btn {
+    flex: 1 1 7.5rem;
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_orange);
+    padding: 8px 16px;
+    border: 1px solid var(--cl_orange);
+    border-radius: 5px;
+    background: var(--cl_white);
+    transition: var(--transition);
+}
+
+.booking_time-btn.active {
+    background: var(--cl_orange);
+    color: var(--cl_white);
+}
+
+.bootking_bottom-date {
+    padding: 10px;
+    border: 1px solid var(--cl_orange);
+    border-radius: 5px;
+}
+
+.booking_date-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.booking_month {
+    font-size: 12px;
+}
+
+.booking_date-top-right {
+    display: flex;
+    border: 1px solid rgba(245, 102, 6, 0.4);
+    border-radius: 10px;
+    align-items: center;
+    /* width: 85px; */
+    justify-content: space-between;
+    padding: 2px 10px;
+}
+
+.booking_date-right-into {
+    position: relative;
+}
+
+.booking_date-top-right-b {
+    position: absolute;
+    background: var(--cl_white);
+    right: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 8px 30px 5px rgb(0 0 0 / 20%);
+    height: 180px;
+    overflow-y: auto;
+}
+
+.month_all {
+    border: 1px solid var(--cl_black);
+    padding: 3px 10px;
+}
+
+.month_all.active {
+    border-color: var(--cl_orange);
+    background: var(--cl_orange);
+    color: var(--cl_white);
+}
+
+.b_d_top-right-into {
+    padding: 10px;
+}
+
+.booking_date-bottom {
+    display: flex;
+    gap: 9px;
+}
+
+.booking_date-bottom-box {
+    display: flex;
+    flex: 1 1 5rem;
+    flex-direction: column;
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_black);
+    background: var(--cl_white);
+    border-radius: 12px;
+    padding: 8px;
+    text-transform: capitalize;
+    align-items: center;
+    width: 40px;
+    border: none;
+    transition: var(--transition);
+}
+
+.booking_date-bottom-box.active {
+    color: var(--cl_white);
+    background: var(--cl_orange);
+}
+
+.booking_bottom-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    position: relative;
+    height: 80px;
+}
+
+.booking_cancel-btn {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_black);
+    /* display: flex; */
+    padding: 14px 18px 14px 24px;
+    gap: 20px;
+    border-radius: 15px;
+    background: #FAF9FF;
+    border: 1px solid transparent;
+    align-items: center;
+}
+
+.booking_confirm-btn {
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_white);
+    padding: 14px 24px;
+    display: flex;
+    gap: 8px;
+    background: var(--cl_orange);
+    border-radius: 15px;
+    border: 1px solid transparent;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    border: 1px solid var(--cl_orange);
+}
+.plus_minus-icon {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.order-result {
+    border: 1px solid var(--cl_orange);
+    padding: 5px 10px;
+    background: var(--cl_white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: var(--cl_result);
+    display: none;
+    position: relative;
+}
+
+.order-resultactive {
+    display: flex;
+}
+
+.booking_result-tabel {
+    color: var(--cl_orange);
+}
+
+.booking_result-right-into {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--cl_black);
+    display: flex;
+    gap: 3px;
+}
+
+.result_box {
+    padding-top: 20px;
+}
+
+.booking_all-span {
+    text-transform: capitalize;
+    color: var(--cl_orange);
+}
+
+.booking_result-right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 140px;
+    gap: 5px;
+}
+
+.booking-table-h4 {
+    font-family: var(--LB);
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--cl_text);
+}
+
+.result_remove {
+    display: flex;
+    align-items: center;
+}
+
+.order_remove {
+    position: absolute;
+    top: -26px;
+    right: -1px;
+    padding: 2px 10px;
+    border: 1px solid var(--cl_orange);
+    font-family: var(--LB);
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--cl_white);
+    background: var(--cl_red);
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.bookingThinking {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--cl_booking-bg);
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.bookingThinkingActive {
+    display: flex;
+}
+
+.bookingThinking-into {
+    background: var(--cl_white);
+    padding: 25px;
+    padding-bottom: 10px;
+    opacity: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--LB);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--cl_black);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 230px;
+    border-radius: 5px;
+}
+
+.bookingThinking-into h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.bookingThinking-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookingThinking-btn {
+    padding: 5px 20px;
+    width: 65px;
+}
+
+
+
+
+/* Pixels */
+
+
+.menu_order-M-P {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.menu_order-number {
+    font-family: var(--LB);
+    font-size: 20px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off, 'calt' off;
+    color: var(--cl_white);
+}
+
+
+
+/*  */
+
+/* .menu_order{
+    display: block;
+} */
+
+
+
+
+
+
+
+
+
+/* Heart Section */
+.heart_boxs {
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.heart_box{
+    display: flex;
+    gap: 8px;
+}
+.heart_box-container{
+    padding: 0 9px !important;
+}
+
+
+
+
+
+
+
+@keyframes ripples {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}

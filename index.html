@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header" id="header">
+            <div class="header_links active">
+                <div class="header_links-img">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <h3>home</h3>
+            </div>
+            <div class="header_links">
+                <div class="header_links-img">
+                    <!-- <img class="header_links-img-into" src="img/Menu_icons.png" alt=""> -->
+                    <!-- <img class="header_links-img-into" src="img/menu_icons2.png" alt=""> -->
+                    <img class="header_links-img-into" src="img/menu_icons3.png" alt="">
+                </div>
+                <h3>menu</h3>
+            </div>
+            <div class="header_links">
+                <div class="header_links-img">
+                    <img class="header_links-img-into" src="img/Booking icons2.png" alt="">
+                </div>
+                <h3>booking</h3>
+            </div>
+            <div class="header_links">
+                <div class="header_links-img">
+                    <!-- <img class="header_links-img-into" src="img/Heart icons.png" alt=""> -->
+                    <i class="fa-solid fa-heart header_links-img-into"></i>
+                </div>
+                <h3>heart</h3>
+            </div>
+            <div class="header_links">
+                <div class="header_links-img">
+                    <!-- <img class="header_links-img-into" src="img/Cart_icons.png" alt=""> -->
+                    <i class="fa-solid fa-basket-shopping header_links-img-into"></i>
+                </div>
+                <h3>cart</h3>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="header_content home ">
+            <section class="home_header">
+                <!-- <span class="favorites_heart">
+                    <img class="favorites_heart-img favorites_heart-img1" src="img/Heart icons.png" alt=""> 
+                    <img class="favorites_heart-img favorites_heart-img2" src="img/heart_icons-2.png">
+                </span> -->
+                <div class="container">
+                    <div class="home_header_title">
+                        <div class="home_header_title-into">
+                            <img class="header_title-logo" src="img/Logo.png" alt="">
+                            <img class="header_title_img2" src="img/women_img2.png" alt="">
+                        </div>
+                        <div class="input_search">
+                            <img src="img/search_icon.png" alt="">
+                            <input class="header_title-search" type="text" placeholder="Type a dish or cuisine">
+                        </div>
+                        <div class="header_discount-percent" id="discount_percent">
+                            <h2 class="header_discount-title">Up to <span
+                                    class="header_discount-percent-span">70</span>% OFF</h2>
+                            <h4 class="header_discount-text">on your first order</h4>
+                            <a class="btn_discount all_btns" href="#">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home_popular">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Popular categories</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="popular_category_boxs">
+                    <div class="popular_category_box">
+                        <img src="img/Biryani popular.png" alt="">
+                        <h4>biryani</h4>
+                    </div>
+                </div>
+            </section>
+            <section class="home_special home_imp-main" id="biryani">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Today’s Special</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="special_boxs home_important-main" data-homeMenu="todayMenu">
+                </div>
+            </section>
+            <section class="home_burger home_imp-main" id="burger">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Delicious Burger</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="burger_box home_important-main" data-homeMenu="burger">
+                </div>
+            </section>
+            <section class="home_dessert home_imp-main" id="dessert">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Delicious Dessert</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="dessert_box home_important-main" data-homeMenu="dessert">
+                </div>
+            </section>
+            <section class="home_shake home_imp-main" id="shake">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Different Shakes</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="shake_box home_important-main" data-homeMenu="shake">
+                </div>
+            </section>
+            <section class="home_drink home_imp-main" id="drink">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Cold drinks</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="drink_box home_important-main" data-homeMenu="drink">
+                </div>
+            </section>
+        </section>
+        <section class="header_content menu active">
+            <section class="menu_header">
+                <div class="menu_header-container">
+                    <div class="menu_header_title">
+                        <img class="back_icon" src="img/back_icon.png" alt="">
+                        <h1 class="menu_header_title-h1">Menu</h1>
+                    </div>
+                </div>
+                <div class="input_search menu_header-input">
+                    <img src="img/search_icon.png" alt="">
+                    <input class="header_title-search" type="text" placeholder="Type a dish or cuisine">
+                </div>
+            </section>
+            <section class="menu_category">
+                <div class="container">
+                    <div class="home_popular-into">
+                        <div class="home_popular-into-in">
+                            <img src="img/start_icon.png" alt="">
+                            <h2 class="main_title-h2">Select categories</h2>
+                        </div>
+                        <h4 class="see_all">See All</h4>
+                    </div>
+                </div>
+                <div class="menu_category-title">
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn active all_btns" type="button" data-menu="burger"><i
+                                class="fa-solid fa-burger"></i>Fast food</button>
+                    </div>
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn all_btns" type="button" data-menu="fish"><i
+                                class="fa-solid fa-fish-fins"></i>Fish</button>
+                    </div>
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn all_btns" type="button" data-menu="dessert"><img
+                                class="shakes_colors shakes_icon1 dessert_icans-img menu_category_imgActive"
+                                src="img/dessert_icon-color.png" alt=""><img
+                                class="shakes_colors-white shakes_icon1 dessert_icans-img menu_category_img"
+                                src="img/dessert_icon-white.png" alt="">Desert</button>
+                    </div>
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn all_btns" type="button" data-menu="cake"><i
+                                class="fa-solid fa-cake-candles"></i>Cake</button>
+                    </div>
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn all_btns" type="button" data-menu="biryani"><i
+                                class="fa-solid fa-bowl-rice"></i>Biryani</button>
+                    </div>
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn all_btns" type="button" data-menu="shake"><img
+                                class="shakes_colors shakes_icon1 menu_category_imgActive"
+                                src="img/shake_color-icons.png" alt=""><img
+                                class="shakes_colors-white shakes_icon1 menu_category_img"
+                                src="img/shake_white-icons.png" alt="">shakes</button>
+                    </div>
+                    <div id="menu_category_btn" class="menu_category-title-box">
+                        <button class="menu_category_btn all_btns" type="button" data-menu="drink"><img
+                                class="shakes_colors shakes_icon1 menu_category_imgActive"
+                                src="img/drink_icons-color.png" alt=""><img
+                                class="shakes_colors-white shakes_icon1 menu_category_img"
+                                src="img/drink_icons-white.png" alt="">drink</button>
+                    </div>
+                </div>
+                <div class="menu_category-boxs">
+
+                </div>
+            </section>
+
+            <section id="order" class="menu_order">
+
+            </section>
+
+
+        </section>
+        <section class="header_content booking ">
+            <div class="bookingThinking">
+                <div class="bookingThinking-into">
+                    <h3>Are You Sure</h3>
+                    <div class="bookingThinking-btns">
+                        <button class="bookingThinking-btn bookingThinking-btn-no">No</button>
+                        <button class="bookingThinking-btn bookingThinking-btn-yes">Yes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="booking_top">
+                <div class="booking_top-img-shadow"></div>
+            </div>
+            <div class="booking_bottom">
+                <div class="container">
+                    <div id="booking_bottom-into" class="booking_bottom-into">
+                        <div class="booking_bottom-top">
+                            <img src="img/xres_icon.png" class="bootking_kres" alt="">
+                            <h2 class="menu_header_title-h1">Book a Table</h2>
+                        </div>
+                        <div class="booking_bottom-guests">
+                            <h3 class="booking_all-title">Guests</h3>
+
+                            <div class="booking_bottom-guests-number">
+                                <i class="fa-solid fa-minus plus_minus-icon minus_icon"></i>
+                                <output class="main__product-num">
+                                    <font>0</font>
+                                </output>
+                                <i class="fa-solid fa-plus plus_minus-icon plus_icon"></i>
+                            </div>
+                        </div>
+                        <div class="booking_bottom-time">
+                            <h3 class="booking_all-title">select Time</h3>
+                            <div class="booking_bottom-time-btn">
+                                <button class="booking_time-btn all_btns active">17:00</button>
+                                <button class="booking_time-btn all_btns">17:30</button>
+                                <button class="booking_time-btn all_btns">18:00</button>
+                                <button class="booking_time-btn all_btns">18:30</button>
+                                <button class="booking_time-btn all_btns">19:00</button>
+                                <button class="booking_time-btn all_btns">19:30</button>
+                                <button class="booking_time-btn all_btns">20:00</button>
+                                <button class="booking_time-btn all_btns">20:30</button>
+                            </div>
+                        </div>
+                        <div class="bootking_bottom-date">
+                            <div class="booking_date-top">
+                                <h3 class="booking_all-title">Date</h3>
+                                <div class="booking_date-right-into">
+                                    <div class="booking_date-top-right">
+                                        <h5 class="booking_all-title booking_month"></h5>
+                                        <!-- <div class="b_d_top-right-into">
+                                            <img src="img/bottom.icon.png" alt="">
+                                        </div> -->
+                                    </div>
+                                    <!-- <div class="booking_date-top-right-b">
+                                        <h5 class="booking_all-title booking_month month_all active"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                        <h5 class="booking_all-title booking_month month_all"></h5>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="booking_date-bottom">
+                                <button class="booking_date-bottom-box all_btns mon active">
+                                    <h4 class="boxing_date-bottom-box-h4">mon</h4>
+                                    <h5>03</h5>
+                                </button>
+                                <button class="booking_date-bottom-box all_btns tue">
+                                    <h4 class="boxing_date-bottom-box-h4">tue</h4>
+                                    <h5>03</h5>
+                                </button>
+                                <button class="booking_date-bottom-box all_btns wed">
+                                    <h4 class="boxing_date-bottom-box-h4">wed</h4>
+                                    <h5>03</h5>
+                                </button>
+                                <button class="booking_date-bottom-box all_btns thur">
+                                    <h4 class="boxing_date-bottom-box-h4">thur</h4>
+                                    <h5>03</h5>
+                                </button>
+                                <button class="booking_date-bottom-box all_btns fri">
+                                    <h4 class="boxing_date-bottom-box-h4">fri</h4>
+                                    <h5>03</h5>
+                                </button>
+                                <button class="booking_date-bottom-box all_btns sat">
+                                    <h4 class="boxing_date-bottom-box-h4">sat</h4>
+                                    <h5>03</h5>
+                                </button>
+                                <button class="booking_date-bottom-box all_btns sun">
+                                    <h4 class="boxing_date-bottom-box-h4">sun</h4>
+                                    <h5>03</h5>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="booking_bottom-bottom">
+                            <button class="booking_cancel-btn all_btns booking-remove">Cancel <img
+                                    src="img/xres_icon.png" alt=""></button>
+                            <button class="booking_confirm-btn all_btns">confirm <img src="img/booking_white-color.png"
+                                    alt=""></button>
+                        </div>
+                        <div class="result_box">
+                            <div class="order-result">
+                                <button class="order_remove">
+                                    <h5 class="result_remove">Remove</h5>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                                <div class="booking_table">
+                                    <h3 class="booking_all-title">Your table is <span
+                                            class="booking_result-tabel">13</span></h3>
+                                    <h4 class="booking-table-h4">Don't miss!</h4>
+                                </div>
+                                <div class="booking_result-right">
+                                    <div class="booking_result-right-into">
+                                        <h4 class="b_r_r_into-h4">Guests: </h4>
+                                        <span class="order-result__guests booking_all-span"></span>
+                                    </div>
+                                    <div class="booking_result-right-into">
+                                        <h4 class="b_r_r_into-h4">Time: </h4>
+                                        <span class="order-result__time booking_all-span"></span>
+                                    </div>
+                                    <div class="booking_result-right-into">
+                                        <h4 class="b_r_r_into-h4">Date: </h4>
+                                        <span class="order-result__date booking_all-span"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="header_content heart ">
+            <div class="container heart_box-container">
+                <div class="heart_boxs">
+                </div>
+            </div>
+        </section>
+        <section class="header_content cart">
+
+        </section>
+    </main>
+    <script src="./js/data.js"></script>
+    <script src="./js/heart.js"></script>
+    <script src="./js/order.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
